@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+main{
+    min-block-size: -webkit-fill-available;
+}
+#containersInpt{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+body{
+    min-height:100vh;
+    height: 100vh;
+}
+button{
+    --tw-bg-opacity: 1;
+    border: solid 4px rgb(244 63 94 / var(--tw-bg-opacity));
+    height: 45%;
+    width: 14vw;
+    font-weight: 600;
+    font-size: 1.2rem;
+    --tw-bg-opacity: 1;
+    color: 
+    rgb(23 23 23 / var(--tw-bg-opacity));;
+}
+
+.select{
+    background-color:rgb(244 63 94 / var(--tw-bg-opacity));
+    --tw-bg-opacity: 1;
+    color: rgb(241 245 249 / var(--tw-bg-opacity));
+}
+button:not(.select):hover {
+    --tw-bg-opacity: 1; background-color: rgb(255 228 230 / var(--tw-bg-opacity));
+}
+
+select{
+    --tw-bg-opacity: 1;
+    border: solid 4px rgb(244 63 94 / var(--tw-bg-opacity));
+    display: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: 
+    rgb(23 23 23 / var(--tw-bg-opacity));;
+}

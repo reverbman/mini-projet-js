@@ -1,0 +1,114 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+*{
+    font-family: 'Star Wars', sans-serif;
+    /* display: none; */
+    margin:0;
+    padding:0;
+} 
+body {
+    min-height:100vh;
+    height: 100vh;
+}
+#mask{
+    cursor: wait;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: fixed;
+}
+#containers{
+    min-block-size: -webkit-fill-available;
+    width: 100%;
+    margin:0;
+    padding:0;
+    background-image: url(../img/frame_00_delay-0.1s.gif);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(10px) contrast(1.1);
+}
+img{
+    animation: 50s move infinite  ease-in-out alternate;
+    resize: horizontal, vertical;
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    object-fit: fill;
+}
+header{
+    height: 20vh;
+}
+h1{
+    color: #FFEB00;
+    font-weight: 400;
+    margin: 0 ;
+    height: 12vh;
+    display: flex;
+    align-items: flex-end;
+    font-size: 4rem;
+    
+}
+main{
+    width: 100%;
+}
+p{
+    color: #fefefe;
+}
+
+#bg{
+    width: 10vw;
+}
+#btn{
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    width: 25vw;
+    height: 5vh;
+    border-radius: 0.5rem;
+    color: #FFEB00;
+    background-color: transparent;
+    border: solid 2px #FFEB00;
+    font-size: 1.2rem;
+    /* cursor: pointer; */
+    backdrop-filter: blur(3px) ;
+}
+button:hover{
+    transform: scale(1.03);
+}
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-around;
+    gap: 50px;
+  }
+  
+  #content #peopleContent {
+    width: 30vw;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    border: solid 2px #FFEB00;
+    border-radius: 0.5rem;
+   
+    cursor: pointer;
+    align-items: center;
+    font-size: 1.5rem;
+    animation: anim 0.1s forwards;
+  }
+
+  @keyframes anim{
+    0%{
+        transform: scale(0);
+        opacity: 0%;
+
+    }100%{
+        transform: scale(1);
+        opacity: 100%;
+    }
+  }
