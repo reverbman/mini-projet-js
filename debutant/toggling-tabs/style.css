@@ -45,3 +45,6 @@ select{
     color: 
     rgb(23 23 23 / var(--tw-bg-opacity));;
 }
+.none{
+    display: none;
+}

@@ -1,45 +1,45 @@
 let btn = document.querySelectorAll('button');
 let containersInpt = document.querySelector("#containersInpt");
 let select = document.querySelector('select');
-let arr = [];
 
-for(let j = 0; j < btn.length; j++) {
+for (let j = 0; j < btn.length; j++) {
     let option = document.createElement('option');
     select.appendChild(option);
-    btn.forEach(element => {
-        arr.push(element.textContent)
-    })
-    option.textContent = arr[j];
+    option.textContent = btn[j].textContent;
     btn[j].addEventListener('click', () => {
-         let selection = select.selectedIndex = (j)
-        for(let e = 0; e < btn.length; e++) {
+        let selection = select.selectedIndex = (j)
+        for (let e = 0; e < btn.length; e++) {
             btn[e].classList.remove('select');
         }
         btn[j].classList.add('select');
     })
-    if(window.matchMedia("(min-width: 1150px)").matches  && document.querySelectorAll('option').forEach(b => {
-        b.addEventListener('click',function(){})
-    })){
-        
-    };
 }
 
-function appearance() {
-    btn.forEach(e => {
-        e.style.display = 'none'
+function selected() {
+    select.addEventListener("change", function () {
+        btn.forEach(element => {
+            element.classList.remove('select');
+        });
+        btn[select.selectedIndex].classList.add('select')
     });
-    select.style.display = 'block';
 }
+window.addEventListener("load", selected, false);
 
 window.addEventListener("resize", () => {
     if (window.matchMedia("(min-width: 1150px)").matches) {
-        btn.forEach(a => {
-            a.style.display = ''
+        btn.forEach(t => {
+            t.style.display = ''
         });
         select.style.display = 'none'
     } else {
-        appearance();
+        appearance()
     }
 })
+function appearance() {
+    btn.forEach(t => {
+        t.style.display = 'none'
+    });
+    select.style.display = 'block';
+}
 
 
